@@ -51,8 +51,15 @@ namespace osu.Game.Rulesets.Osu.Objects
         public double TimeFadeIn = 400;
 
         private HitObjectProperty<Vector2> position;
+        private HitObjectProperty<Vector2> startPosition;
 
         public Bindable<Vector2> PositionBindable => position.Bindable;
+
+        public virtual Vector2 StartPosition
+        {
+            get => startPosition.Value;
+            set => startPosition.Value = value;
+        }
 
         public virtual Vector2 Position
         {
